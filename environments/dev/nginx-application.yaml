@@ -1,0 +1,21 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: nginx-application-dev
+  namespace: argocd
+spec:
+  destination:
+    namespace: nginx-dev
+    server: https://kubernetes.default.svc
+  project: nginx
+  source:
+    path: ./resources/dev
+    repoURL: git@github.com:GaneshPhapale/nodejs-k8s-argocd.git
+    targetRevision: HEAD
+  syncPolicy:
+    automated:
+      selfHeal: true
+      prune: true
+    syncOptions:
+    - CreateNamespace=true
+    - ApplyOutOfSyncOnly=true
