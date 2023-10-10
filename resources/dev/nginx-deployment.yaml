@@ -6,7 +6,6 @@ spec:
   selector:
     matchLabels:
       app: nginx
-  replicas: 2
   template:
     metadata:
       labels:
@@ -14,6 +13,6 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: 060696/nginxapp:v1.0 
+        image: 060696/nginxapp
         ports:
         - containerPort: 80

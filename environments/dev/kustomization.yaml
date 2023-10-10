@@ -1,0 +1,10 @@
+---
+namespace: test-ui
+replicas:
+  - name: nginx
+    count: 1
+images:
+  - name: 060696/nginxapp
+    newTag: ~v1.0
+resources:
+  - ./resources/dev
