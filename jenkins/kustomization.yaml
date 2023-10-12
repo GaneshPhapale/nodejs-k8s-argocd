@@ -1,0 +1,10 @@
+---
+namespace: test-ui
+replicas:
+  - name: jenkins
+    count: 1
+images:
+  - name: 060696/jenkins-with-docker
+    newTag: latest
+resources:
+  - ./jenkins/resources

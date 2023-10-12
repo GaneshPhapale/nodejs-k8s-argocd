@@ -1,0 +1,27 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: jenkins
+  namespace: argocd
+  annotations:
+    argocd-image-updater.argoproj.io/image-list: myalias=060696/jenkins-with-docker:~latest
+    argocd-image-updater.argoproj.io/git-branch: main
+    argocd-image-updater.argoproj.io/myalias.update-strategy: latest
+    argocd-image-updater.argoproj.io/write-back-method: git:secret:argocd/repo-933764852
+    argocd-image-updater.argoproj.io/myalias.force-update: "true"
+spec:
+  destination:
+    namespace: jenkins
+    server: https://kubernetes.default.svc
+  project: jenkins
+  source:
+    path: ./jenkins/resources
+    repoURL: git@github.com:GaneshPhapale/nodejs-k8s-argocd.git
+    targetRevision: HEAD
+  syncPolicy:
+    automated:
+      selfHeal: true
+      prune: true
+    syncOptions:
+    - CreateNamespace=true
+    - ApplyOutOfSyncOnly=true
