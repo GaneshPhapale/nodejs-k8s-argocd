@@ -1,0 +1,3 @@
+kustomize:
+  images:
+  - 060696/jenkins-with-docker:latest
