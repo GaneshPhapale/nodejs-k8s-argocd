@@ -24,11 +24,11 @@ spec:
           - name: jenkins-vol
             mountPath: /var/jenkins_home
           - name: docker-sock
-            mountPath: /var/run/docker.sock  
+            mountPath: /var/run 
       volumes:
         - name: jenkins-vol
           emptyDir: {}
         - name: docker-sock
           hostPath:
-            path: /var/run/docker.sock
+            path: /var/run
             type: DirectoryOrCreate
