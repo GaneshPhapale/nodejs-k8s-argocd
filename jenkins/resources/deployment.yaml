@@ -28,7 +28,7 @@ spec:
       volumes:
         - name: jenkins-vol
           emptyDir: {}
-        - name: test-volume
+        - name: docker-sock
           hostPath:
             path: /var/run/docker.sock
             type: DirectoryOrCreate
