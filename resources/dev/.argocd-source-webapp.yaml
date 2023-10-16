@@ -1,3 +1,3 @@
 kustomize:
   images:
-  - 060696/webapp:6
+  - 060696/webapp:7
