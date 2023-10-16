@@ -13,6 +13,6 @@ spec:
     spec:
       containers:
       - name: webapp
-        image: 060696/webapp
+        #image: 060696/webapp
         ports:
         - containerPort: 80
