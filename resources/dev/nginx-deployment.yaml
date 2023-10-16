@@ -13,6 +13,6 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: 060696/nginxapp
+        image: 060696/nodejs-app
         ports:
         - containerPort: 80

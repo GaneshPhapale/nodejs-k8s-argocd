@@ -4,7 +4,7 @@ metadata:
   name: nginx-application-dev
   namespace: argocd
   annotations:
-    argocd-image-updater.argoproj.io/image-list: myalias=060696/nginxapp:~v1
+    argocd-image-updater.argoproj.io/image-list: myalias=060696/nodejs-app:~1
     argocd-image-updater.argoproj.io/git-branch: main
     argocd-image-updater.argoproj.io/myalias.update-strategy: latest
     argocd-image-updater.argoproj.io/write-back-method: git:secret:argocd/repo-933764852

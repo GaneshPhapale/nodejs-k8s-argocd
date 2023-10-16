@@ -4,7 +4,7 @@ replicas:
   - name: nginx
     count: 1
 images:
-  - name: 060696/nginxapp
-    newTag: ~v1.0
+  - name: 060696/nodejs-app
+    newTag: ~1
 resources:
   - ./resources/dev
