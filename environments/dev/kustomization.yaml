@@ -1,10 +1,10 @@
 ---
-namespace: test-ui
+namespace: webapp
 replicas:
-  - name: nginx
+  - name: webapp
     count: 1
 images:
-  - name: 060696/nodejs-app
-    newTag: ~1
+  - name: 060696/webapp
+    newTag: ~webapp
 resources:
   - ./resources/dev

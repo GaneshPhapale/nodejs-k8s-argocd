@@ -1,18 +1,18 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nginx
+  name: webapp
 spec:
   selector:
     matchLabels:
-      app: nginx
+      app: webapp
   template:
     metadata:
       labels:
-        app: nginx
+        app: webapp
     spec:
       containers:
-      - name: nginx
-        image: 060696/nodejs-app
+      - name: webapp
+        image: 060696/webapp
         ports:
         - containerPort: 80

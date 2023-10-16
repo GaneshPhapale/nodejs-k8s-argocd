@@ -1,14 +1,14 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: nginx-service
+  name: webapp-service
   labels:
-    run: nginx-service
+    run: webapp-service
 spec:
   ports:
   - port: 80
     protocol: TCP
   selector:
-    app: nginx
+    app: webapp
   type: NodePort
     

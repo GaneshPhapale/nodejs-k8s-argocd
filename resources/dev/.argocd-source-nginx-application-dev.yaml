@@ -1,3 +1,0 @@
-kustomize:
-  images:
-  - 060696/nginxapp:v1.2
