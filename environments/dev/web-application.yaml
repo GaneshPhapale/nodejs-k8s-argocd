@@ -16,7 +16,7 @@ spec:
   project: webapp
   source:
     path: ./resources/dev
-    repoURL: git@github.com:GaneshPhapale/webapp-k8s-argocd.git
+    repoURL: git@github.com:GaneshPhapale/nodejs-k8s-argocd.git
     targetRevision: HEAD
   syncPolicy:
     automated:
